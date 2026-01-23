@@ -5,6 +5,32 @@ app_description = "app for AHRAM requirments"
 app_email = "syahya8@gmail.com"
 app_license = "mit"
 
+
+
+
+
+doc_events = {
+    "Sales Invoice": {
+        "validate": [
+            "epc_app.validations.freeze_datetime.validate_freeze_datetime",
+            "epc_app.validations.stock_rules.enforce_update_stock_and_warehouse",
+        ]
+    },
+    "Purchase Invoice": {
+        "validate": [
+            "epc_app.validations.freeze_datetime.validate_freeze_datetime",
+            "epc_app.validations.stock_rules.enforce_update_stock_and_warehouse",
+        ],
+        "before_submit": "epc_app.validations.cash_balance.validate_cash_balance_before_submit",
+    },
+    "Payment Entry": {
+        "validate": "epc_app.validations.freeze_datetime.validate_freeze_datetime",
+        "before_submit": "epc_app.validations.cash_balance.validate_cash_balance_before_submit",
+    },
+    "Journal Entry": {"validate": "epc_app.validations.freeze_datetime.validate_freeze_datetime"},
+    "Sales Order": {"validate": "epc_app.validations.freeze_datetime.validate_freeze_datetime"},
+    "Quotation": {"validate": "epc_app.validations.freeze_datetime.validate_freeze_datetime"},
+}
 # Apps
 # ------------------
 
