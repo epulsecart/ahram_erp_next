@@ -31,6 +31,10 @@ doc_events = {
     "Sales Order": {"validate": "epc_app.validations.freeze_datetime.validate_freeze_datetime"},
     "Quotation": {"validate": "epc_app.validations.freeze_datetime.validate_freeze_datetime"},
 }
+doctype_js = {
+    "Landed Cost Voucher": "public/js/landed_cost_voucher.js",
+}
+
 # Apps
 # ------------------
 
