@@ -33,7 +33,12 @@ doc_events = {
 }
 doctype_js = {
     "Landed Cost Voucher": "public/js/landed_cost_voucher.js",
+    "Sales Invoice": "public/js/sales_helpers.js",
+    "Sales Order": "public/js/sales_helpers.js",
+    "Quotation": "public/js/sales_helpers.js",
 }
+
+
 
 # Apps
 # ------------------
