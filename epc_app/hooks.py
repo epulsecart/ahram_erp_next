@@ -37,6 +37,12 @@ doctype_js = {
     "Sales Order": "public/js/sales_helpers.js",
     "Quotation": "public/js/sales_helpers.js",
 }
+scheduler_events = {
+    "hourly": [
+        "epc_app.commissions.auto_commission.execute"
+    ]
+}
+
 
 
 
