@@ -42,6 +42,7 @@ scheduler_events = {
         "epc_app.commissions.auto_commission.execute"
     ]
 }
+app_include_css = "/assets/epc_app/css/arabic_font.css"
 
 
 

@@ -1,0 +1,10 @@
+/* Desk + forms */
+body, .desk-page, .page-container, .form-section, .control-label, .form-control,
+.grid-body, .grid-row, .widget, .sidebar-section, .dropdown-menu {
+  font-family: "Cairo", "Tahoma", "Arial", sans-serif !important;
+}
+
+/* Print */
+@media print {
+  body { font-family: "Cairo", "Tahoma", "Arial", sans-serif !important; }
+}
