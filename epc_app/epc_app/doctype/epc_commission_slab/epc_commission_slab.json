@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-25 14:41:50.821732",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "limit_amount",
+  "rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "limit_amount",
+   "fieldtype": "Float",
+   "label": "\u062d\u062f \u0627\u0644\u0645\u0628\u0644\u063a "
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Percent",
+   "label": "\u0627\u0644\u0639\u0645\u0648\u0644\u0629"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-25 14:43:01.853601",
+ "modified_by": "Administrator",
+ "module": "epc_app",
+ "name": "EPC Commission Slab",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
