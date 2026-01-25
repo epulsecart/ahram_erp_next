@@ -5,20 +5,59 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_kw07"
+  "enable_auto_commission",
+  "force_run",
+  "commission_component",
+  "commission_period",
+  "run_key_suffix",
+  "commission_slabs"
  ],
  "fields": [
   {
-   "fieldname": "section_break_kw07",
-   "fieldtype": "Section Break"
+   "default": "0",
+   "fieldname": "enable_auto_commission",
+   "fieldtype": "Check",
+   "label": "\u062a\u0641\u0639\u064a\u0644 \u0627\u0644\u0627\u062d\u062a\u0633\u0627\u0628 \u0627\u0644\u0627\u0648\u062a\u0648\u0645\u0627\u062a\u064a\u0643\u064a \u0644\u0644\u0639\u0645\u0648\u0644\u0627\u062a"
+  },
+  {
+   "default": "0",
+   "fieldname": "force_run",
+   "fieldtype": "Check",
+   "label": "\u0641\u0631\u0636 \u0627\u0644\u0627\u062d\u062a\u0633\u0627\u0628 "
+  },
+  {
+   "default": "\u0627\u0644\u0639\u0645\u0648\u0644\u0627\u062a",
+   "fieldname": "commission_component",
+   "fieldtype": "Link",
+   "label": "\u0645\u0643\u0648\u0646 \u0627\u0644\u0631\u0627\u062a\u0628",
+   "options": "Salary Component"
+  },
+  {
+   "default": "Current Month",
+   "fieldname": "commission_period",
+   "fieldtype": "Select",
+   "label": "\u0641\u062a\u0631\u0629 \u0627\u0644\u0627\u062d\u062a\u0633\u0627\u0628 ",
+   "options": "Last Month\nCurrent Month"
+  },
+  {
+   "default": "MONTHLY",
+   "fieldname": "run_key_suffix",
+   "fieldtype": "Data",
+   "label": "\u0644\u0627\u062d\u0642\u0629 \u0645\u0641\u062a\u0627\u062d \u0627\u0644\u062a\u0646\u0641\u064a\u0630(\u0645\u0644\u0627\u062d\u0638\u0627\u062a \u0639\u0627\u0645\u0647)"
+  },
+  {
+   "fieldname": "commission_slabs",
+   "fieldtype": "Table",
+   "label": "\u0634\u0631\u0627\u0626\u062d \u0627\u0644\u0639\u0645\u0648\u0644\u0627\u062a",
+   "options": "EPC Commission Slab"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2026-01-23 22:58:45.269577",
- "modified_by": "Administrator",
+ "modified": "2026-01-25 00:57:09.983619",
+ "modified_by": "syahya8@gmail.com",
  "module": "epc_app",
  "name": "EPC App Settings",
  "owner": "Administrator",
