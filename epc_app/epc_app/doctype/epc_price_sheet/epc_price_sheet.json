@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2026-01-25 20:11:06.407777",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "price_list",
+  "pricing_rule",
+  "item_group",
+  "lines"
+ ],
+ "fields": [
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "\u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0627\u0633\u0639\u0627\u0631",
+   "options": "Price List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pricing_rule",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "\u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u062a\u062e\u0641\u064a\u0636 ",
+   "options": "Pricing Rule",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "\u0645\u062c\u0645\u0648\u0639\u0629 \u0627\u0644\u0635\u0646\u0641",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "\u0627\u0644\u0627\u0635\u0646\u0627\u0641 \u0627\u0644\u0645\u062e\u0641\u0636\u0629",
+   "options": "EPC Price Sheet Item"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-25 20:28:36.419334",
+ "modified_by": "Administrator",
+ "module": "epc_app",
+ "name": "EPC Price Sheet",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

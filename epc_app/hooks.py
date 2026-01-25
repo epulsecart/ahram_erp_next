@@ -36,6 +36,8 @@ doctype_js = {
     "Sales Invoice": "public/js/sales_helpers.js",
     "Sales Order": "public/js/sales_helpers.js",
     "Quotation": "public/js/sales_helpers.js",
+    "EPC Price Sheet": "public/js/epc_price_sheet.js",
+
 }
 scheduler_events = {
     "hourly": [
@@ -44,6 +46,10 @@ scheduler_events = {
 }
 app_include_css = "/assets/epc_app/css/arabic_font.css"
 
+fixtures = [
+    {"dt": "Print Format", "filters": [["name", "in", ["EPC Price Sheet Print"]]]},
+    {"dt": "Print Format", "filters": [["name", "in", ["مصادقه حساب العملاء والموردين"]]]}
+]
 
 
 
