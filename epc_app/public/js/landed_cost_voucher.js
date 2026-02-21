@@ -1,4 +1,11 @@
 (() => {
+  const flt = (typeof window.flt === "function")
+    ? window.flt
+    : (v) => {
+        const n = parseFloat(v);
+        return Number.isFinite(n) ? n : 0;
+      };
+
   async function fill_cbm_from_item(frm) {
     frm.__cbm_cache = frm.__cbm_cache || {};
 
@@ -23,6 +30,9 @@
 
   frappe.ui.form.on("Landed Cost Voucher", {
     get_items_from_purchase_receipts(frm) {
+      setTimeout(() => fill_cbm_from_item(frm), 600);
+    },
+    get_items_from_purchase_invoices(frm) {
       setTimeout(() => fill_cbm_from_item(frm), 600);
     },
   });

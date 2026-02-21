@@ -37,6 +37,7 @@ doctype_js = {
     "Sales Order": "public/js/sales_helpers.js",
     "Quotation": "public/js/sales_helpers.js",
     "EPC Price Sheet": "public/js/epc_price_sheet.js",
+    "Landed Cost Voucher": "public/js/lcv_cbm_dist.js",
 
 }
 scheduler_events = {
