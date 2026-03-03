@@ -19,7 +19,6 @@ doc_events = {
     "Purchase Invoice": {
         "validate": [
             "epc_app.validations.freeze_datetime.validate_freeze_datetime",
-            "epc_app.validations.stock_rules.enforce_update_stock_and_warehouse",
         ],
         "before_submit": "epc_app.validations.cash_balance.validate_cash_balance_before_submit",
     },
