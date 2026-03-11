@@ -2,6 +2,9 @@ import frappe
 from frappe import _
 
 def enforce_update_stock_and_warehouse(doc, method=None):
+    if getattr(doc, "custom_noon_import_batch", None):
+        return
+
     # Force update_stock always (Sales Invoice + Purchase Invoice)
     if doc.meta.has_field("update_stock"):
         doc.update_stock = 1

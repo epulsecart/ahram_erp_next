@@ -1,0 +1,54 @@
+{
+ "app": "epc_app",
+ "doctype": "Workspace Sidebar",
+ "for_user": "",
+ "header_icon": "folder-normal",
+ "items": [
+  {
+   "label": "Home",
+   "idx": 0,
+   "link_to": "Noon Integration",
+   "link_type": "Workspace",
+   "type": "Link"
+  },
+  {
+   "label": "Noon Import Batch",
+   "idx": 1,
+   "link_to": "Noon Import Batch",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Noon Marketplace Profile",
+   "idx": 2,
+   "link_to": "Noon Marketplace Profile",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Noon Import Row",
+   "idx": 3,
+   "link_to": "Noon Import Row",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Noon Item Mapping",
+   "idx": 4,
+   "link_to": "Noon Item Mapping",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Noon Fee Mapping",
+   "idx": 5,
+   "link_to": "Noon Fee Mapping",
+   "link_type": "DocType",
+   "type": "Link"
+  }
+ ],
+ "module": "Noon Integration",
+ "name": "Noon Integration",
+ "standard": 1,
+ "title": "Noon Integration"
+}

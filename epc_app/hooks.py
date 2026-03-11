@@ -52,6 +52,16 @@ fixtures = [
 ]
 
 
+add_to_apps_screen = [
+    {
+        "name": "Noon Integration",
+        "logo": "/assets/epc_app/noon_integration_logo.svg",
+        "title": "Noon Integration",
+        "route": "/desk/noon-integration",
+    }
+]
+
+
 
 # Apps
 # ------------------
@@ -297,4 +307,3 @@ fixtures = [
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-

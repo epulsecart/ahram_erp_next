@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-10 04:23:01.592943",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "partner_sku",
+  "noon_sku",
+  "item_code",
+  "item_name",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "\u0627\u0644\u0634\u0631\u0643\u0629 ",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "partner_sku",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "\u0643\u0648\u062f \u0627\u0644\u0635\u0646\u0641 \u0627\u0644 sku \u0627\u0648 \u0636\u0639 \u0643\u0648\u062f \u0627\u0644\u0635\u0646\u0641 \u0627\u0630\u0627 \u0647\u0648 \u0627\u0644\u0645\u0639\u062a\u0645\u062f",
+   "reqd": 1
+  },
+  {
+   "fieldname": "noon_sku",
+   "fieldtype": "Data",
+   "label": "\u0643\u0648\u062f \u0635\u0646\u0641 \u0627\u0644\u0645\u0646\u0635\u0647 "
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "\u0643\u0648\u062f \u0627\u0644\u0635\u0646\u0641 \u0641\u064a \u0627\u0644\u0646\u0638\u0627\u0645",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "\u0627\u0633\u0645 \u0627\u0644\u0635\u0646\u0641"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "\u0645\u0641\u0639\u0644"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-10 04:42:29.278886",
+ "modified_by": "Administrator",
+ "module": "Noon Integration",
+ "name": "Noon Item Mapping",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

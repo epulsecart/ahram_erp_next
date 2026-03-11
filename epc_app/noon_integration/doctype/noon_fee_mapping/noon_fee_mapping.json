@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-10 04:15:50.785499",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fee_key",
+  "direction",
+  "item_code",
+  "expense_account",
+  "income_account",
+  "company",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "fee_key",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "\u0646\u0648\u0639 \u0627\u0644\u062a\u0643\u0627\u0644\u064a\u0641",
+   "reqd": 1
+  },
+  {
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "\u0645\u0646 \u0627\u0648 \u0627\u0644\u0649 \u0627\u0644\u0645\u0646\u0635\u0647",
+   "options": "Payable to Noon\nReceivable from Noon",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "\u0631\u0645\u0632 \u0627\u0644\u0645\u0646\u062a\u062c",
+   "options": "Item"
+  },
+  {
+   "fieldname": "expense_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "\u062d\u0633\u0627\u0628 \u0627\u0644\u0645\u0635\u0627\u0631\u064a\u0641",
+   "options": "Account"
+  },
+  {
+   "fieldname": "income_account",
+   "fieldtype": "Link",
+   "label": "\u062d\u0633\u0627\u0628 \u0627\u0644\u062f\u062e\u0644",
+   "options": "Account"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "\u0627\u0644\u0634\u0631\u0643\u0629",
+   "options": "Company"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "\u0645\u0641\u0639\u0644\u061f "
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-10 07:11:50.543741",
+ "modified_by": "Administrator",
+ "module": "Noon Integration",
+ "name": "Noon Fee Mapping",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

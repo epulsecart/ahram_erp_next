@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-10 04:43:18.646478",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "profile",
+  "from_date",
+  "to_date",
+  "status",
+  "invoices_file",
+  "transactions_file",
+  "consolidated_file",
+  "statement_detail_file",
+  "last_run_result"
+ ],
+ "fields": [
+  {
+   "fieldname": "profile",
+   "fieldtype": "Link",
+   "label": "\u0627\u0644\u0645\u0644\u0641 ",
+   "options": "Noon Marketplace Profile"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "\u0645\u0646 \u062a\u0627\u0631\u064a\u062e"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "\u0627\u0644\u0649 \u062a\u0627\u0631\u064a\u062e"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "\u0627\u0644\u062d\u0627\u0644\u0647",
+   "options": "Draft\nAnalyzed\nProcessed\nFailed"
+  },
+  {
+   "fieldname": "invoices_file",
+   "fieldtype": "Attach",
+   "label": "Invoices & Credit Notes Report"
+  },
+  {
+   "fieldname": "transactions_file",
+   "fieldtype": "Attach",
+   "label": "Transaction View Report)"
+  },
+  {
+   "fieldname": "consolidated_file",
+   "fieldtype": "Attach",
+   "label": "Consolidated Item Level Fees Report"
+  },
+  {
+   "fieldname": "statement_detail_file",
+   "fieldtype": "Attach",
+   "label": "Noon Finance Web Statement Detail Report Noon"
+  },
+  {
+   "fieldname": "last_run_result",
+   "fieldtype": "Long Text",
+   "label": "\u0627\u0644\u0646\u062a\u0627\u0626\u062c",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-11 05:28:02.606449",
+ "modified_by": "Administrator",
+ "module": "Noon Integration",
+ "name": "Noon Import Batch",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

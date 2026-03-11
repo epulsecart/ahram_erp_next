@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-10 04:48:02.752468",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "batch",
+  "source_file",
+  "source_row_no",
+  "statement_nr",
+  "invoice_nr",
+  "creditnote_nr",
+  "reference_nr",
+  "order_nr",
+  "item_nr",
+  "transaction_type",
+  "document_type",
+  "partner_sku",
+  "fee_key",
+  "amount",
+  "vat_amount",
+  "gross_amount",
+  "status",
+  "error_message",
+  "linked_doctype",
+  "linked_docname",
+  "source_row_key"
+ ],
+ "fields": [
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "\u0627\u0644\u062f\u0641\u0639\u0647",
+   "options": "Noon Import Batch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_file",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "\u0627\u0644\u0645\u0644\u0641 ",
+   "options": "Invoices & Credit Notes Report\nTransaction View Report\nConsolidated Item Level Fees Report\nNoon Finance Web Statement Detail Report Noon",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_row_no",
+   "fieldtype": "Int",
+   "label": "\u0631\u0642\u0645 \u0627\u0644\u0633\u0637\u0631"
+  },
+  {
+   "fieldname": "statement_nr",
+   "fieldtype": "Data",
+   "label": "\u0631\u0642\u0645 \u0627\u0644\u0639\u0645\u0644\u064a\u0629"
+  },
+  {
+   "fieldname": "invoice_nr",
+   "fieldtype": "Data",
+   "label": "\u0631\u0642\u0645 \u0627\u0644\u0641\u0627\u062a\u0648\u0631\u0629"
+  },
+  {
+   "fieldname": "creditnote_nr",
+   "fieldtype": "Data",
+   "label": "\u0631\u0642\u0645 \u0627\u0644\u0639\u0645\u0644\u064a\u0647 \u0627\u0644\u0645\u0627\u0644\u064a\u0629"
+  },
+  {
+   "fieldname": "reference_nr",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u0631\u0642\u0645 \u0627\u0644\u0645\u0631\u062c\u0639\u064a \u0645\u0646 \u0627\u0644\u0645\u0646\u0635\u0629"
+  },
+  {
+   "fieldname": "order_nr",
+   "fieldtype": "Data",
+   "label": "\u0631\u0642\u0645 \u0627\u0644\u0637\u0644\u0628"
+  },
+  {
+   "fieldname": "item_nr",
+   "fieldtype": "Data",
+   "label": "\u0631\u0642\u0645 \u0627\u0644\u0637\u0644\u0628"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Data",
+   "label": "\u0646\u0648\u0639 \u0627\u0644\u0639\u0645\u0644\u064a\u0629"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Data",
+   "label": "\u0646\u0648\u0639 \u0627\u0644\u0645\u0633\u062a\u0646\u062f"
+  },
+  {
+   "fieldname": "partner_sku",
+   "fieldtype": "Data",
+   "label": "\u0631\u0642\u0645 \u0627\u0644\u0645\u0646\u062a\u062c sku \u0627\u0648 \u0643\u0648\u062f \u0627\u0644\u0635\u0646\u0641 \u0645\u0646 \u0627\u0644\u0646\u0638\u0627\u0645"
+  },
+  {
+   "fieldname": "fee_key",
+   "fieldtype": "Data",
+   "label": "\u0645\u0641\u062a\u0627\u062d \u0627\u0644\u062a\u0643\u0627\u0644\u064a\u0641"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "\u0627\u0644\u0645\u0628\u0644\u063a"
+  },
+  {
+   "fieldname": "vat_amount",
+   "fieldtype": "Currency",
+   "label": "\u0627\u0644\u0636\u0631\u064a\u0628\u0629"
+  },
+  {
+   "fieldname": "gross_amount",
+   "fieldtype": "Currency",
+   "label": "\u0627\u0644\u0627\u062c\u0645\u0627\u0644\u064a"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "\u0627\u0644\u062d\u0627\u0644\u0629",
+   "options": "Pending\nMapped\nError\nSkipped"
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "\u0631\u0633\u0627\u0644\u0629 \u0627\u0644\u062e\u0637\u0627\u0621"
+  },
+  {
+   "fieldname": "linked_doctype",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u062c\u062f\u0648\u0644 \u0627\u0644\u0645\u0631\u062a\u0628\u0637"
+  },
+  {
+   "fieldname": "linked_docname",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u062c\u062f\u0648\u0644 \u0627\u0644\u0645\u0631\u062a\u0628\u0637 \u0627\u0633\u0645"
+  },
+  {
+   "fieldname": "source_row_key",
+   "fieldtype": "Data",
+   "label": "source row key",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-11 06:15:11.748758",
+ "modified_by": "Administrator",
+ "module": "Noon Integration",
+ "name": "Noon Import Row",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

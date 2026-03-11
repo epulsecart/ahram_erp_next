@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Noon Integration">
+  <rect width="128" height="128" rx="24" fill="#1f4b99"/>
+  <path d="M30 92V36h12l26 33V36h14v56H70L44 59v33H30z" fill="#ffffff"/>
+  <path d="M93 36h5c8 0 14 6 14 14v28c0 8-6 14-14 14h-5c-8 0-14-6-14-14V50c0-8 6-14 14-14zm0 14v28h5V50h-5z" fill="#ffd166"/>
+</svg>

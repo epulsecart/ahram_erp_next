@@ -1,0 +1,68 @@
+{
+ "app": "epc_app",
+ "charts": [],
+ "content": "[{\"id\":\"noon_import_batch_shortcut\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Noon Import Batch\",\"col\":3}},{\"id\":\"noon_marketplace_profile_shortcut\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Noon Marketplace Profile\",\"col\":3}},{\"id\":\"noon_import_row_shortcut\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Noon Import Row\",\"col\":3}},{\"id\":\"noon_item_mapping_shortcut\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Noon Item Mapping\",\"col\":3}},{\"id\":\"noon_fee_mapping_shortcut\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Noon Fee Mapping\",\"col\":3}}]",
+ "creation": "2026-03-11 00:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "folder-normal",
+ "idx": 0,
+ "is_hidden": 0,
+ "is_standard": 1,
+ "label": "Noon Integration",
+ "links": [],
+ "modified": "2026-03-11 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Noon Integration",
+ "name": "Noon Integration",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Noon Import Batch",
+   "link_to": "Noon Import Batch",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Noon Marketplace Profile",
+   "link_to": "Noon Marketplace Profile",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Noon Import Row",
+   "link_to": "Noon Import Row",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Noon Item Mapping",
+   "link_to": "Noon Item Mapping",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Noon Fee Mapping",
+   "link_to": "Noon Fee Mapping",
+   "type": "DocType"
+  }
+ ],
+ "title": "Noon Integration",
+ "type": "Workspace"
+}
