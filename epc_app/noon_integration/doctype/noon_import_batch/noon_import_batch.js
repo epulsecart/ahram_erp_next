@@ -9,6 +9,27 @@ function formatNoonPipelineResult(result) {
 	const validation = results.validate_batch_ready || {};
 	const blockingIssues = validation.blocking_issues || [];
 	const warnings = validation.warnings || [];
+	const mappingReport = results.missing_item_mapping_report || null;
+	const unresolvedFromReport = Array.isArray(mappingReport?.item_mappings_needed)
+		? mappingReport.item_mappings_needed.filter((row) => !row?.mapped_item_code)
+		: [];
+	const unresolvedPreviewFromBackend = Array.isArray(results.unresolved_item_mappings_preview)
+		? results.unresolved_item_mappings_preview
+		: [];
+	const unresolvedPreviewRows = unresolvedPreviewFromBackend.length
+		? unresolvedPreviewFromBackend
+		: unresolvedFromReport.slice(0, 20);
+	const unresolvedCountValue = Number(results.unresolved_item_mappings_count);
+	const unresolvedItemMappingsCount = Number.isFinite(unresolvedCountValue) && unresolvedCountValue >= 0
+		? unresolvedCountValue
+		: unresolvedFromReport.length;
+	const hasUnresolvedItemMappings =
+		unresolvedItemMappingsCount > 0 || Boolean(mappingReport);
+
+	const getReadablePartnerSku = (row) => {
+		if (!row || typeof row !== "object") return "";
+		return row.partner_sku || row.partnerSku || row.sku || "";
+	};
 	const hasBlockingIssues = blockingIssues.length > 0;
 
 	const fileLabels = {
@@ -34,6 +55,35 @@ function formatNoonPipelineResult(result) {
 	if (hasBlockingIssues) {
 		lines.push("تعذر إنشاء المسودات");
 		lines.push("");
+
+		if (hasUnresolvedItemMappings) {
+			lines.push("المشكلة:");
+			lines.push("- يوجد أصناف من نون غير مربوطة بأصناف ERPNext بعد محاولة الربط التلقائي.");
+			lines.push("");
+			lines.push("العدد:");
+			lines.push(`- عدد الأصناف غير المربوطة: ${unresolvedItemMappingsCount}`);
+
+			if (unresolvedPreviewRows.length) {
+				lines.push("");
+				lines.push("أول الأصناف التي ما زالت تحتاج ربطًا:");
+				unresolvedPreviewRows.forEach((row) => {
+					const sku = getReadablePartnerSku(row) || "غير معروف";
+					const rowsCount = Number(row?.rows_count || 0);
+
+					if (rowsCount > 0) {
+						lines.push(`- ${sku} (عدد الصفوف: ${rowsCount})`);
+					} else {
+						lines.push(`- ${sku}`);
+					}
+				});
+			}
+
+			lines.push("");
+			lines.push("ماذا يجب على المستخدم أن يفعل؟");
+			lines.push("- استكمال الربط في شاشة Noon Item Mapping");
+			lines.push("- ثم إعادة تشغيل المعالجة");
+		}
+
 		lines.push("المشاكل المانعة:");
 		blockingIssues.forEach((issue) => {
 			lines.push(`- ${issue.message}`);
