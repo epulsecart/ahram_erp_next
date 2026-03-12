@@ -1,54 +1,90 @@
 {
  "app": "epc_app",
+ "creation": "2026-03-11 06:58:15.582691",
+ "docstatus": 0,
  "doctype": "Workspace Sidebar",
  "for_user": "",
  "header_icon": "folder-normal",
+ "idx": 0,
  "items": [
   {
-   "label": "Home",
-   "idx": 0,
-   "link_to": "Noon Integration",
-   "link_type": "Workspace",
-   "type": "Link"
-  },
-  {
+   "child": 0,
+   "collapsible": 0,
+   "icon": "list",
+   "indent": 0,
+   "keep_closed": 0,
    "label": "Noon Import Batch",
-   "idx": 1,
    "link_to": "Noon Import Batch",
    "link_type": "DocType",
+   "show_arrow": 0,
    "type": "Link"
   },
   {
+   "child": 0,
+   "collapsible": 0,
+   "icon": "list",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Home",
+   "link_to": "Noon Integration",
+   "link_type": "Workspace",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 0,
+   "icon": "list",
+   "indent": 0,
+   "keep_closed": 0,
    "label": "Noon Marketplace Profile",
-   "idx": 2,
    "link_to": "Noon Marketplace Profile",
    "link_type": "DocType",
+   "show_arrow": 0,
    "type": "Link"
   },
   {
+   "child": 0,
+   "collapsible": 0,
+   "icon": "list",
+   "indent": 0,
+   "keep_closed": 0,
    "label": "Noon Import Row",
-   "idx": 3,
    "link_to": "Noon Import Row",
    "link_type": "DocType",
+   "show_arrow": 0,
    "type": "Link"
   },
   {
+   "child": 0,
+   "collapsible": 0,
+   "icon": "list",
+   "indent": 0,
+   "keep_closed": 0,
    "label": "Noon Item Mapping",
-   "idx": 4,
    "link_to": "Noon Item Mapping",
    "link_type": "DocType",
+   "show_arrow": 0,
    "type": "Link"
   },
   {
+   "child": 0,
+   "collapsible": 0,
+   "icon": "list",
+   "indent": 0,
+   "keep_closed": 0,
    "label": "Noon Fee Mapping",
-   "idx": 5,
    "link_to": "Noon Fee Mapping",
    "link_type": "DocType",
+   "show_arrow": 0,
    "type": "Link"
   }
  ],
+ "modified": "2026-03-11 16:33:44.217561",
+ "modified_by": "Administrator",
  "module": "Noon Integration",
  "name": "Noon Integration",
+ "owner": "Administrator",
  "standard": 1,
  "title": "Noon Integration"
 }

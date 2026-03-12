@@ -1829,12 +1829,33 @@ def run_full_draft_pipeline(batch_name: str, include_payments: int = 0):
 
     results["analyze_batch"] = analyze_batch(batch_name)
     results["stage_batch_rows"] = stage_batch_rows(batch_name)
+    results["auto_create_item_mappings"] = auto_create_exact_item_mappings(batch_name)
 
     validation = validate_batch_ready(batch_name)
     results["validate_batch_ready"] = validation
 
     if not validation.get("ready"):
         blocking_issues = validation.get("blocking_issues") or []
+        has_missing_item_mappings = any(
+            issue.get("type") == "missing_item_mappings"
+            for issue in blocking_issues
+        )
+
+        if has_missing_item_mappings:
+            mapping_report = get_required_mappings(batch_name)
+            unresolved_item_mappings = [
+                row for row in (mapping_report.get("item_mappings_needed") or [])
+                if not row.get("mapped_item_code")
+            ]
+            results["missing_item_mapping_report"] = mapping_report
+            results["unresolved_item_mappings_count"] = len(unresolved_item_mappings)
+            results["unresolved_item_mappings_preview"] = unresolved_item_mappings[:20]
+            return {
+                "batch": batch_name,
+                "include_payments": include_payments,
+                "results": results,
+            }
+
         if blocking_issues:
             frappe.throw(blocking_issues[0].get("message"))
         frappe.throw("الدفعة غير جاهزة لإنشاء المسودات المطلوبة.")
