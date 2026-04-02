@@ -1,13 +1,9 @@
-/* Print preview only: restore sidebar hidden by core non-Form route rule */
-body[data-route^="print"] .layout-main-section-wrapper,
-body[data-route^="Print"] .layout-main-section-wrapper {
-	display: flex !important;
-}
-
+/* Print preview only: show sidebar without breaking preview layout */
 body[data-route^="print"] .layout-side-section.print-preview-sidebar,
-body[data-route^="Print"] .layout-side-section.print-preview-sidebar {
+body[data-route^="Print"] .layout-side-section.print-preview-sidebar,
+#page-print .layout-side-section.print-preview-sidebar {
 	display: block !important;
-	flex: 0 0 280px;
-	max-width: 280px;
 	width: 280px;
+	min-width: 280px;
+	max-width: 280px;
 }
