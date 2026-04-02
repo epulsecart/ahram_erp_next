@@ -44,7 +44,10 @@ scheduler_events = {
         "epc_app.commissions.auto_commission.execute"
     ]
 }
-app_include_css = "/assets/epc_app/css/arabic_font.css"
+app_include_css = [
+    "/assets/epc_app/css/arabic_font.css",
+    "/assets/epc_app/css/print_sidebar_fix.css",
+]
 
 fixtures = [
     {"dt": "Print Format", "filters": [["name", "in", ["EPC Price Sheet Print"]]]},
